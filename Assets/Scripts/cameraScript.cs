@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class cameraScript : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class cameraScript : MonoBehaviour
 
     public GameObject deskTrigger;
     public GameObject consoleTrigger;
+    public GameObject backButton;
 
     public float speed = 5f;
 
@@ -35,13 +37,15 @@ public class cameraScript : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, camOriginR, speed * Time.deltaTime);
             deskTrigger.SetActive(true);
             consoleTrigger.SetActive(true);
+            backButton.SetActive(false);
         }
         else
         {
-            mapa.transform.GetChild(2).gameObject.GetComponent<moveMap>().atlasWysuniety = false;
+            mapa.transform.GetChild(3).gameObject.GetComponent<moveMap>().atlasWysuniety = false;
             mapa.transform.localScale = new Vector3(0, 0, 0);
             deskTrigger.SetActive(false);
             consoleTrigger.SetActive(false);
+            backButton.SetActive(true);
         }
         if (cameraScene == 1)
         {            
