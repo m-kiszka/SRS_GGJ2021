@@ -5,15 +5,21 @@ using UnityEngine;
 public class cameraScript : MonoBehaviour
 {
     public int cameraScene = 0; //0 - domyslny widok; 1 - widok na biurko; 2 - widok na konsolete
+
+    public GameObject deskTrigger;
+    public GameObject consoleTrigger;
+
     public float speed = 5f;
+
+    public GameObject mapa;
+
     private Vector3 camOriginV3;
     private Quaternion camOriginR;
     private Quaternion deskRotation;
     private Quaternion consoleRotation;
-    private GameObject camGO;
+
     void Start()
     {
-        camGO = gameObject;
         camOriginV3 = transform.position;
         camOriginR = transform.rotation;
         deskRotation = Quaternion.Euler(45, 180, 0);
@@ -24,11 +30,21 @@ public class cameraScript : MonoBehaviour
     {
         if(cameraScene==0)
         {
+            mapa.transform.localScale = new Vector3(1, 1, 1);
             transform.position = Vector3.Lerp(transform.position, camOriginV3, speed * Time.deltaTime);
             transform.rotation = Quaternion.Lerp(transform.rotation, camOriginR, speed * Time.deltaTime);
+            deskTrigger.SetActive(true);
+            consoleTrigger.SetActive(true);
+        }
+        else
+        {
+            mapa.transform.GetChild(2).gameObject.GetComponent<moveMap>().atlasWysuniety = false;
+            mapa.transform.localScale = new Vector3(0, 0, 0);
+            deskTrigger.SetActive(false);
+            consoleTrigger.SetActive(false);
         }
         if (cameraScene == 1)
-        {
+        {            
             transform.position = Vector3.Lerp(transform.position, new Vector3(13,22,-23), speed * Time.deltaTime);
             transform.rotation = Quaternion.Lerp(transform.rotation, deskRotation, speed * Time.deltaTime);
         }
