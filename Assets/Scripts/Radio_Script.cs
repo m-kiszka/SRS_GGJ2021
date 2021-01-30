@@ -5,6 +5,7 @@ using UnityEngine;
 public class Radio_Script : MonoBehaviour
 {
     AudioSource m_MyAudioSource;
+    public AudioSource buttonSound;
     
     bool m_Play;
     bool m_ToggleChange;
@@ -24,14 +25,18 @@ public class Radio_Script : MonoBehaviour
         if (m_Play == true)
         {
             m_Play = false;
+            buttonSound.Play();
             m_MyAudioSource.volume = 0;
             Debug.Log("Wy³¹cz");
+            
         }
         else
         {
             m_Play = true;
+            buttonSound.Play();
             m_MyAudioSource.volume = 1;
             Debug.Log("W³¹cz");
+            
         }
 
     }
