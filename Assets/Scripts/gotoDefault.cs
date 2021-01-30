@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class gotoDefault : MonoBehaviour
 {
-    
     public void goToDefault()
     {
         if(Camera.main.GetComponent<cameraScript>().cameraScene!=0)
