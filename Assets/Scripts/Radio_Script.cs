@@ -19,6 +19,17 @@ public class Radio_Script : MonoBehaviour
 
     }
 
+    private void mute()
+    {
+        m_MyAudioSource.volume = 0;
+
+    }
+
+    private void unMute()
+    {
+        m_MyAudioSource.volume = 1;
+    }
+
    
     void OnMouseDown()
     {
@@ -26,7 +37,7 @@ public class Radio_Script : MonoBehaviour
         {
             m_Play = false;
             buttonSound.Play();
-            m_MyAudioSource.volume = 0;
+            Invoke("mute", 0.1f);
             Debug.Log("Wy³¹cz");
             
         }
@@ -34,7 +45,7 @@ public class Radio_Script : MonoBehaviour
         {
             m_Play = true;
             buttonSound.Play();
-            m_MyAudioSource.volume = 1;
+            Invoke("unMute", 0.3f);
             Debug.Log("W³¹cz");
             
         }
