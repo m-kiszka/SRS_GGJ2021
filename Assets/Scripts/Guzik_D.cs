@@ -16,7 +16,7 @@ public class Guzik_D : MonoBehaviour
             buttonPress.Play();
             guzikMain.sekwencja += "D";
             singleSFX.Play();
-            nextSoundTime = Time.time + 2f;
+            nextSoundTime = Time.time + 1f;
 
         }
 
