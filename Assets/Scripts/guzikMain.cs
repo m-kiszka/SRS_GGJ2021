@@ -23,7 +23,7 @@ public class guzikMain : MonoBehaviour
             Debug.Log(sekwencja);
             buttonPress.Play();
 
-            if (sekwencja == "ABCDE" & isLaunched == false)
+            if (sekwencja == "DBFEC" & isLaunched == false)
             {
                 silnikSFX.Play();
                 sekwencja = "";
