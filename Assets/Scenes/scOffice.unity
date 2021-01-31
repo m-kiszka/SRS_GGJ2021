@@ -605,15 +605,15 @@ RectTransform:
   m_GameObject: {fileID: 219296837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.16}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_LocalScale: {x: 1.05, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 1911195976}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.08, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.01, y: 0}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &219296839
 MonoBehaviour:
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4b84bcd6979c3884aaba5d0964477118, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72f7272309690ea41afd44675a42d534, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4469,7 +4469,7 @@ PrefabInstance:
     - target: {fileID: -6959057187884029489, guid: 5a44ecf0f3d0dd64f8bac9c3c7a68484, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 242a9473bb87c9b4d9a87de54eb96024, type: 2}
+      objectReference: {fileID: 2100000, guid: 0392373c3fe12644aa5ccfd79abce458, type: 2}
     - target: {fileID: -5012640007366243420, guid: 5a44ecf0f3d0dd64f8bac9c3c7a68484, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
