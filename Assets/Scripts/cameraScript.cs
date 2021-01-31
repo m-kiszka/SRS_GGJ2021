@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class cameraScript : MonoBehaviour
 {
+    public int hajs=1200;
+    public float koszty;
+
     public int cameraScene = 0; //0 - domyslny widok; 1 - widok na biurko; 2 - widok na konsolete
 
     public GameObject deskTrigger;
