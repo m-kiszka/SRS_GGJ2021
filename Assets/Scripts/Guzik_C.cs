@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sekwencja_C : MonoBehaviour
+public class Guzik_C : MonoBehaviour
 {
     public Animation buttonPress;
     float nextSoundTime = 0;

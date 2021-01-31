@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sekwencja_A : MonoBehaviour
+public class Guzik_A : MonoBehaviour
 {
 
     public Animation buttonPress;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Guzik_ : MonoBehaviour
+public class Guzik_F : MonoBehaviour
 {
     public Animation buttonPress;
     float nextSoundTime = 0;
