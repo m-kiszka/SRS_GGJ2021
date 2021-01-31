@@ -30,7 +30,13 @@ public class cameraScript : MonoBehaviour
 
     void Update()
     {
-        if(cameraScene==0)
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+        if (cameraScene==0)
         {
             mapa.transform.localScale = new Vector3(1, 1, 1);
             transform.position = Vector3.Lerp(transform.position, camOriginV3, speed * Time.deltaTime);
