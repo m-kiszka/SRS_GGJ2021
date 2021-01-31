@@ -42,11 +42,11 @@ public class przyblizKsiazke : MonoBehaviour
             {
                 if (Input.GetAxis("Mouse ScrollWheel") > 0)
                 {
-                    gameObject.transform.position += new Vector3(0, -0.25f, 0.25f);
+                    gameObject.transform.position += new Vector3(0, -0.1f, 0.1f);
                 }
                 if (Input.GetAxis("Mouse ScrollWheel") < 0)
                 {
-                    gameObject.transform.position -= new Vector3(0, -0.25f, 0.25f);
+                    gameObject.transform.position -= new Vector3(0, -0.1f, 0.1f);
                 }
             }
         }
