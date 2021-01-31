@@ -15,7 +15,7 @@ public class audioOnClick : MonoBehaviour
         {
             buttonPress.Play();
             singleSFX.Play();
-            nextSoundTime = Time.time + 3f;
+            nextSoundTime = Time.time + 2f;
 
         }
 
