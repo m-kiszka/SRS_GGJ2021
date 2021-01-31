@@ -8648,6 +8648,7 @@ GameObject:
   - component: {fileID: 3494250540505192806}
   - component: {fileID: 4266530587943568349}
   - component: {fileID: 4266530587943568350}
+  - component: {fileID: 4266530587943568351}
   m_Layer: 0
   m_Name: Matematyka i Ty
   m_TagString: Untagged
@@ -8681,6 +8682,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.495262, y: 0.902935, z: 3.6756408}
   m_Center: {x: 0.0052798404, y: -0.048532486, z: -0.034236792}
+--- !u!114 &4266530587943568351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4266530587943568348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebffc140ededf8d4695415ad301dad26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!4 &4288837408259153393
 Transform:
   m_ObjectHideFlags: 0
