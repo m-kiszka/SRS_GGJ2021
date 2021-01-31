@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class moveMap : MonoBehaviour
 {
+    public AudioSource sliderDown;
+    public AudioSource sliderUp;
     public RectTransform atlasRect;
     public GameObject parent;
     public float speed = 5f;
@@ -33,10 +35,13 @@ public class moveMap : MonoBehaviour
         if(atlasWysuniety)
         {
             atlasWysuniety = false;
+            sliderDown.Play();
+
         }
         else
         {
             atlasWysuniety = true;
+            sliderUp.Play();
         }
     }    
 }
