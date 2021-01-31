@@ -1948,7 +1948,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5648432973251703424, guid: 45875452e166d0e4980648efc7845fe6, type: 3}
   m_PrefabInstance: {fileID: 1306653304}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &515827599
+--- !u!111 &515827602
 Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4758,7 +4758,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dd61307e33f27a445a6104eaa2b604af, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.49
   m_Pitch: 1
   Loop: 0
   Mute: 0

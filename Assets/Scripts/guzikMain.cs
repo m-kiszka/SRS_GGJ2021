@@ -26,17 +26,21 @@ public class guzikMain : MonoBehaviour
             if (sekwencja == "ABCDE" & isLaunched == false)
             {
                 silnikSFX.Play();
-                tromboneSFX.Play();
                 sekwencja = "";
                 Debug.Log("Uda³o siê!");
                 isLaunched = true;
 
             }
-            else
+            else if(isLaunched==false)
             {
                 brokenSFX.Play();
                 sekwencja = "";
                 Debug.Log("Nie uda³o siê !");
+                isLaunched = false;
+            }
+            else
+            {
+                tromboneSFX.Play();
             }
             
             
