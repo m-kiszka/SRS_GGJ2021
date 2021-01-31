@@ -12,6 +12,11 @@ public class cameraScript : MonoBehaviour
 
     public GameObject prompt;
     public GameObject promptPrefab;
+    public GameObject przegranaPrefab;
+    public GameObject fadeOut;
+
+    public GameObject tempObject;
+    public GameObject tempParent;
 
     public bool czyMoznaSterowac = true;
 
@@ -20,6 +25,8 @@ public class cameraScript : MonoBehaviour
     public bool czyTrafiony = false;
     public string nazwaStatku="";
     public GameObject trafionyStatek;
+
+    public Text hajsText;
 
     public float defaultFov;
 
@@ -59,6 +66,16 @@ public class cameraScript : MonoBehaviour
 
     void Update()
     {
+        hajsText.text = hajs.ToString();
+
+        if(hajs<=0 && czyMoznaSterowac)
+        {
+            tempObject=Instantiate(fadeOut, transform.position, transform.rotation);
+            tempObject.transform.parent = tempParent.transform;
+            Instantiate(przegranaPrefab, transform.position, transform.rotation);
+            czyMoznaSterowac = false;
+        }
+
         if(Input.GetKeyDown(KeyCode.F1))
         {
             mainButton.GetComponent<guzikMain>().isLaunched = true;
@@ -84,6 +101,7 @@ public class cameraScript : MonoBehaviour
                 cameraScene = 0;
                 Destroy(destination);
                 mainButton.GetComponent<guzikMain>().isLaunched = false;
+                mainButton.GetComponent<guzikMain>().silnikSFX.Stop();
                 hajs -= Mathf.RoundToInt(koszty);
                 prompt = Instantiate(promptPrefab, transform.position,transform.rotation);
                 if(czyTrafiony)

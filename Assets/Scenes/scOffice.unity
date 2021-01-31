@@ -4184,11 +4184,16 @@ MonoBehaviour:
   koszty: 0
   prompt: {fileID: 0}
   promptPrefab: {fileID: 7224281941566349645, guid: a12801a9ba9d4d84bbf07d44c5bb5fe4, type: 3}
+  przegranaPrefab: {fileID: 5107870911437614213, guid: 153842065072b7245bb7c9cbc65f0465, type: 3}
+  fadeOut: {fileID: 9086502426657053465, guid: 894e52c67549eba4e9aeda06baa87dca, type: 3}
+  tempObject: {fileID: 0}
+  tempParent: {fileID: 1392386074}
   czyMoznaSterowac: 1
   monitorText: {fileID: 1588252263}
   czyTrafiony: 0
   nazwaStatku: 
   trafionyStatek: {fileID: 0}
+  hajsText: {fileID: 1266082469}
   defaultFov: 0
   cameraScene: 0
   deskTrigger: {fileID: 6201671972182526211}
