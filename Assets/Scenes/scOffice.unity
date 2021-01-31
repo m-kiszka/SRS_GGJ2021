@@ -4394,7 +4394,7 @@ PrefabInstance:
     - target: {fileID: -6959057187884029489, guid: 5a44ecf0f3d0dd64f8bac9c3c7a68484, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3bbd5557a0605dd4c863c11f7aa6986b, type: 2}
+      objectReference: {fileID: 2100000, guid: 242a9473bb87c9b4d9a87de54eb96024, type: 2}
     - target: {fileID: -5012640007366243420, guid: 5a44ecf0f3d0dd64f8bac9c3c7a68484, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -8222,7 +8222,7 @@ PrefabInstance:
     - target: {fileID: -4484776414175586343, guid: 3187469db0e42e24a84fe9a18eb5b5a2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3bbd5557a0605dd4c863c11f7aa6986b, type: 2}
+      objectReference: {fileID: 2100000, guid: 0392373c3fe12644aa5ccfd79abce458, type: 2}
     - target: {fileID: 919132149155446097, guid: 3187469db0e42e24a84fe9a18eb5b5a2, type: 3}
       propertyPath: m_Name
       value: "G\u0142o\u015Bnik"
@@ -8230,7 +8230,7 @@ PrefabInstance:
     - target: {fileID: 1272123279827860084, guid: 3187469db0e42e24a84fe9a18eb5b5a2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3bbd5557a0605dd4c863c11f7aa6986b, type: 2}
+      objectReference: {fileID: 2100000, guid: 0392373c3fe12644aa5ccfd79abce458, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3187469db0e42e24a84fe9a18eb5b5a2, type: 3}
 --- !u!4 &1828761906 stripped
