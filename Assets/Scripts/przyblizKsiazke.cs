@@ -33,7 +33,7 @@ public class przyblizKsiazke : MonoBehaviour
 
     private void Update()
     {
-        if(Camera.main.GetComponent<cameraScript>().activeBook==gameObject)
+        if(Camera.main.GetComponent<cameraScript>().activeBook==gameObject && Camera.main.GetComponent<cameraScript>().cameraScene==1)
         {
             if (Mathf.Round(transform.position.x*10f) != Mathf.Round(Camera.main.transform.position.x*10f))
             {
