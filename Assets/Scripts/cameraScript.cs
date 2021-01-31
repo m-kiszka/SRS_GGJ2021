@@ -8,11 +8,15 @@ public class cameraScript : MonoBehaviour
     public int hajs=1200;
     public float koszty;
 
+    public float defaultFov;
+
     public int cameraScene = 0; //0 - domyslny widok; 1 - widok na biurko; 2 - widok na konsolete
 
     public GameObject deskTrigger;
     public GameObject consoleTrigger;
     public GameObject backButton;
+
+    public GameObject activeBook;
 
     public float speed = 5f;
 
@@ -23,10 +27,15 @@ public class cameraScript : MonoBehaviour
     private Quaternion deskRotation;
     private Quaternion consoleRotation;
 
+    float minFov = 15f;
+    float maxFov = 90f;
+    float sensitivity = -10f;
+
     void Start()
     {
         camOriginV3 = transform.position;
         camOriginR = transform.rotation;
+        defaultFov = Camera.main.fieldOfView;
         deskRotation = Quaternion.Euler(45, 180, 0);
         consoleRotation = Quaternion.Euler(12, 180, 0);
     }
@@ -65,6 +74,14 @@ public class cameraScript : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, new Vector3(-12, 17, -16), speed * Time.deltaTime);
             transform.rotation = Quaternion.Lerp(transform.rotation, consoleRotation, speed * Time.deltaTime);
+        }
+        
+        if (activeBook!=null && !Input.GetMouseButton(1))
+        {
+            float fov = Camera.main.fieldOfView;
+            fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
+            fov = Mathf.Clamp(fov, minFov, maxFov);
+            Camera.main.fieldOfView = fov;
         }
     }
 }

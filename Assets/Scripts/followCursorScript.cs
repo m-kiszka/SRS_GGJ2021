@@ -9,13 +9,13 @@ public class followCursorScript : MonoBehaviour
     private float tempKoszty;
     void Update()
     {
-        tempKoszty = Mathf.RoundToInt(gameObject.transform.localScale.x * 1000);
+        tempKoszty = Mathf.RoundToInt(gameObject.transform.localScale.x * 2000);
         Camera.main.GetComponent<cameraScript>().koszty = tempKoszty;
         kosztyText.text = "-"+tempKoszty.ToString();
 
         transform.position = Input.mousePosition;
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0 && gameObject.transform.localScale.x<1)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0 && gameObject.transform.localScale.x<0.5f)
         {
             gameObject.transform.localScale+=new Vector3(0.05f,0.05f,0);
         }
