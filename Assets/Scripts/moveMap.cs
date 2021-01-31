@@ -20,28 +20,42 @@ public class moveMap : MonoBehaviour
 
     void Update()
     {
-        if(!atlasWysuniety)
+        if (Camera.main.GetComponent<cameraScript>().czyMoznaSterowac)
         {
-            atlasRect.anchoredPosition = Vector3.Lerp(atlasRect.anchoredPosition, new Vector3(atlasRect.anchoredPosition.x, atlasTransform.y+30), speed * Time.deltaTime);
-        }
-        else
-        {
-            atlasRect.anchoredPosition = Vector3.Lerp(atlasRect.anchoredPosition, new Vector3(atlasRect.anchoredPosition.x, atlasTransform.y), speed * Time.deltaTime);
+            if (!atlasWysuniety)
+            {
+                atlasRect.anchoredPosition = Vector3.Lerp(atlasRect.anchoredPosition, new Vector3(atlasRect.anchoredPosition.x, atlasTransform.y + 30), speed * Time.deltaTime);
+                if (Camera.main.GetComponent<cameraScript>().destination != null)
+                {
+                    Camera.main.GetComponent<cameraScript>().destination.SetActive(false);
+                }
+            }
+            else
+            {
+                atlasRect.anchoredPosition = Vector3.Lerp(atlasRect.anchoredPosition, new Vector3(atlasRect.anchoredPosition.x, atlasTransform.y), speed * Time.deltaTime);
+                if (Camera.main.GetComponent<cameraScript>().destination != null)
+                {
+                    Camera.main.GetComponent<cameraScript>().destination.SetActive(true);
+                }
+            }
         }
     }
 
     void OnMouseDown()
     {
-        if(atlasWysuniety)
+        if (Camera.main.GetComponent<cameraScript>().czyMoznaSterowac)
         {
-            atlasWysuniety = false;
-            sliderDown.Play();
+            if (atlasWysuniety)
+            {
+                atlasWysuniety = false;
+                sliderDown.Play();
 
-        }
-        else
-        {
-            atlasWysuniety = true;
-            sliderUp.Play();
+            }
+            else
+            {
+                atlasWysuniety = true;
+                sliderUp.Play();
+            }
         }
     }    
 }

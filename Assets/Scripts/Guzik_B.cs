@@ -11,15 +11,17 @@ public class Guzik_B : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (Time.time >= nextSoundTime)
+        if (Camera.main.GetComponent<cameraScript>().czyMoznaSterowac)
         {
-            buttonPress.Play();
-            guzikMain.sekwencja += "B";
-            singleSFX.Play();
-            nextSoundTime = Time.time + 1f;
+            if (Time.time >= nextSoundTime)
+            {
+                buttonPress.Play();
+                guzikMain.sekwencja += "B";
+                singleSFX.Play();
+                nextSoundTime = Time.time + 1f;
+
+            }
 
         }
-
-
     }
 }

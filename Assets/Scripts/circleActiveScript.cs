@@ -16,7 +16,10 @@ public class circleActiveScript : MonoBehaviour
     private void OnMouseExit()
     {
         circle.SetActive(false);
-        kosztyText.SetActive(false);
-        kosztyBG.SetActive(false);
-    }
+        if (Camera.main.GetComponent<cameraScript>().destination == null)
+        {
+            kosztyText.SetActive(false);
+            kosztyBG.SetActive(false);
+        }
+    }    
 }

@@ -11,14 +11,16 @@ public class audioOnClick : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (Time.time >= nextSoundTime)
+        if (Camera.main.GetComponent<cameraScript>().czyMoznaSterowac)
         {
-            buttonPress.Play();
-            singleSFX.Play();
-            nextSoundTime = Time.time + 2f;
+            if (Time.time >= nextSoundTime)
+            {
+                buttonPress.Play();
+                singleSFX.Play();
+                nextSoundTime = Time.time + 2f;
 
+            }
         }
-
 
     }
 }

@@ -6,7 +6,7 @@ public class guzikMain : MonoBehaviour
 {
 
     public static string sekwencja;
-    private bool isLaunched;
+    public bool isLaunched;
     public AudioSource silnikSFX;
     public AudioSource brokenSFX;
     public Animation buttonPress;
@@ -16,38 +16,39 @@ public class guzikMain : MonoBehaviour
 
     void OnMouseDown()
     {
-
-
-        if (Time.time >= nextSoundTime)
+        if (Camera.main.GetComponent<cameraScript>().czyMoznaSterowac)
         {
-            Debug.Log(sekwencja);
-            buttonPress.Play();
 
-            if (sekwencja == "BDCEFA" & isLaunched == false)
+            if (Time.time >= nextSoundTime)
             {
-                silnikSFX.Play();
-                sekwencja = "";
-                Debug.Log("Uda³o siê!");
-                isLaunched = true;
+                Debug.Log(sekwencja);
+                buttonPress.Play();
+
+                if (sekwencja == "BDCEFA" & isLaunched == false)
+                {
+                    silnikSFX.Play();
+                    sekwencja = "";
+                    Debug.Log("Uda³o siê!");
+                    isLaunched = true;
+
+                }
+                else if (isLaunched == false)
+                {
+                    brokenSFX.Play();
+                    sekwencja = "";
+                    Debug.Log("Nie uda³o siê !");
+                    isLaunched = false;
+                }
+                else
+                {
+                    tromboneSFX.Play();
+                }
+
+
+                nextSoundTime = Time.time + 2f;
 
             }
-            else if(isLaunched==false)
-            {
-                brokenSFX.Play();
-                sekwencja = "";
-                Debug.Log("Nie uda³o siê !");
-                isLaunched = false;
-            }
-            else
-            {
-                tromboneSFX.Play();
-            }
-            
-            
-            nextSoundTime = Time.time + 2f;
-
         }
-
 
     }
 

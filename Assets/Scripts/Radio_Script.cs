@@ -33,21 +33,24 @@ public class Radio_Script : MonoBehaviour
    
     void OnMouseDown()
     {
-        if (m_Play == true)
+        if (Camera.main.GetComponent<cameraScript>().czyMoznaSterowac)
         {
-            m_Play = false;
-            buttonSound.Play();
-            Invoke("mute", 0.1f);
-            Debug.Log("Wy³¹cz");
-            
-        }
-        else
-        {
-            m_Play = true;
-            buttonSound.Play();
-            Invoke("unMute", 0.3f);
-            Debug.Log("W³¹cz");
-            
+            if (m_Play == true)
+            {
+                m_Play = false;
+                buttonSound.Play();
+                Invoke("mute", 0.1f);
+                Debug.Log("Wy³¹cz");
+
+            }
+            else
+            {
+                m_Play = true;
+                buttonSound.Play();
+                Invoke("unMute", 0.3f);
+                Debug.Log("W³¹cz");
+
+            }
         }
 
     }
