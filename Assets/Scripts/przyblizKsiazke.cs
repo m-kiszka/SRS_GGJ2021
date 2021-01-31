@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class przyblizKsiazke : MonoBehaviour
 {
+    public AudioSource openBook;
+    public AudioSource closeBook;
     private Vector3 origin;
     private Quaternion originR;
     private GameObject okladka;
@@ -20,10 +22,12 @@ public class przyblizKsiazke : MonoBehaviour
         if(Camera.main.GetComponent<cameraScript>().activeBook != gameObject)
         {
             Camera.main.GetComponent<cameraScript>().activeBook = gameObject;
+            openBook.Play();
         }
         else
         {
             Camera.main.GetComponent<cameraScript>().activeBook = null;
+            closeBook.Play();
         }
     }
 
