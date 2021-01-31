@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class audioOnClick : MonoBehaviour
 {
+    public Animation buttonPress;
     float nextSoundTime = 0;
     public AudioSource singleSFX;
     
@@ -12,8 +13,10 @@ public class audioOnClick : MonoBehaviour
     {
         if (Time.time >= nextSoundTime)
         {
+            buttonPress.Play();
             singleSFX.Play();
             nextSoundTime = Time.time + 3f;
+
         }
 
 
