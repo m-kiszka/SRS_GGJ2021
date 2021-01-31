@@ -9,9 +9,11 @@ public class moveMap : MonoBehaviour
     public float speed = 5f;
     private Vector3 atlasTransform;
     public bool atlasWysuniety=false;
+
+    public GameObject imageGO;
     void Start()
     {
-        atlasTransform = atlasRect.anchoredPosition;
+        atlasTransform = atlasRect.anchoredPosition;       
     }
 
     void Update()
@@ -36,5 +38,5 @@ public class moveMap : MonoBehaviour
         {
             atlasWysuniety = true;
         }
-    }
+    }    
 }
